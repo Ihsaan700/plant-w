@@ -34,7 +34,7 @@ slideArea.addEventListener("click", function () {
         currentSlide = 0
       }
 
-    // the z-index of the current image increases along with z   
+    // picking the right image along with the z-index of the current image increasing along with z   
     images[currentSlide].style.zIndex = z
 })
 
@@ -43,4 +43,22 @@ slideArea.addEventListener("click", function () {
 // event listener for the menu icon
 menuTag.addEventListener("click", function() {
     closeMenu()
+})
+
+
+// adding randomness to the slideArea in the direction of the images
+slideArea.addEventListener("mouseover", function () {
+    images.forEach((image) => {
+
+        // in horizontal direction
+        const x = 100 * Math.random() - 50
+
+       // in vertical direction
+        const y = 100 * Math.random() - 50
+
+        console.log(x)
+        console.log(y)
+
+        image.style.direction = `translate(${x}px, ${y}px)`
+    })
 })
