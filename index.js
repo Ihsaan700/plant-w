@@ -62,3 +62,10 @@ slideArea.addEventListener("mouseover", function () {
         image.style.direction = `translate(${x}px, ${y}px)`
     })
 })
+
+// put images back to place after randomness
+slideArea.addEventListener("mouseout", function () {
+    images.forEach((image) => {
+        image.style.transform = ""
+    })
+})
