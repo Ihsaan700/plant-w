@@ -29,10 +29,12 @@ slideArea.addEventListener("click", function () {
     currentSlide += 1
     z += 1
 
+    // to loop back to slide 1
     if (currentSlide > images.length - 1) {
-        currentSlide = 1
+        currentSlide = 0
       }
-      
+
+    // the z-index of the current image increases along with z   
     images[currentSlide].style.zIndex = z
 })
 
